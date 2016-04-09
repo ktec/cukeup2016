@@ -158,3 +158,29 @@ ul, ol, div, p {
 	font-size: 14px;
 }
 
+div.badge {
+	height: 450px;
+	width: 450px;
+	right: 50px;
+	position: absolute;
+	background-image: url(/images/badge.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+div.badge p {
+	margin: auto;
+	color: #fff;
+	width: 65%;
+	font-size: 0.9em;
+	font-weight: bolder;
+	line-height: 0.9em;
+}
+
+div.badge a {
+	color: $blue1;
+}

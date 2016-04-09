@@ -1,0 +1,101 @@
+/**
+ * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,700,300italic,700italic);
+
+// colours
+$blue1: 	#113F8C; 	$blue2: #01A4A4; 		$blue3: 	#00A1CB;
+$green1: 	#61AE24; 	$green2: #D0D102; 	$green3: 	#32742C;
+$red1: 		#D70060; 	$red2: 	#E54028; 		$red3: 		#F18D05;
+$grey1: 	#616161;
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #eee;
+
+$mainColor: #666;
+$headingColor: #666;
+
+$mainFontSize: 38px;
+$mainFont: Ubuntu, 'sans-serif';
+$headingFont: Ubuntu, 'sans-serif';
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$heading1TextShadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 20px 20px rgba(0,0,0,.15);
+$headingFontWeight: 600;
+$linkColor: #42affa;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-light-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #111;
+	}
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+div.badge {
+	height: 450px;
+	width: 450px;
+	right: 50px;
+	position: absolute;
+	background-image: url(/images/badge.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+div.badge p {
+	margin: auto;
+	color: #fff;
+	width: 65%;
+	font-size: 0.9em;
+	font-weight: bolder;
+	line-height: 0.9em;
+}
+
+div.badge a {
+	color: $blue1;
+}
+
+.reveal pre code {
+  display: block;
+  padding: 25px;
+  overflow: auto;
+  max-height: 800px;
+  word-wrap: normal;
+}
+
+.reveal code {
+  font-size: 0.85em;
+  line-height: 1.0em;
+}
+
+.reveal code.medium {
+  font-size: 0.6em;
+  line-height: 1.0em;
+}
+
+.reveal section img.plain {
+  background: none; }
